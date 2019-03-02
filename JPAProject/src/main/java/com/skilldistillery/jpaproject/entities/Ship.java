@@ -40,8 +40,18 @@ public class Ship {
 
 	private String description;
 
+	private int cost;
+
 	public int getId() {
 		return id;
+	}
+
+	public int getCost() {
+		return cost;
+	}
+
+	public void setCost(int cost) {
+		this.cost = cost;
 	}
 
 	public String getName() {
@@ -141,7 +151,7 @@ public class Ship {
 		return "Ship [id=" + id + ", name=" + name + ", empire=" + empire + ", type=" + type + ", speedWarp="
 				+ speedWarp + ", speedVelocity=" + speedVelocity + ", timeToWarp=" + timeToWarp + ", radarRange="
 				+ radarRange + ", cargoCapacity=" + cargoCapacity + ", mass=" + mass + ", image=" + image
-				+ ", description=" + description + "]";
+				+ ", description=" + description + ", cost=" + cost + "]";
 	}
 
 	@Override
@@ -149,6 +159,7 @@ public class Ship {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + cargoCapacity;
+		result = prime * result + cost;
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((empire == null) ? 0 : empire.hashCode());
 		result = prime * result + id;
@@ -176,6 +187,8 @@ public class Ship {
 			return false;
 		Ship other = (Ship) obj;
 		if (cargoCapacity != other.cargoCapacity)
+			return false;
+		if (cost != other.cost)
 			return false;
 		if (description == null) {
 			if (other.description != null)

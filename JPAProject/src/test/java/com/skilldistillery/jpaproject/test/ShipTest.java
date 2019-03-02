@@ -56,6 +56,7 @@ class ShipTest {
 		assertEquals(64.00, ship.getRadarRange());
 		assertEquals(265, ship.getCargoCapacity());
 		assertEquals(1064000, ship.getMass());
+		assertEquals(25000, ship.getCost());
 		assertEquals("Some Text 1", ship.getDescription());
 		assertEquals("https://wiki.eveuniversity.org/images/thumb/a/a2/Crucifier.jpg/256px-Crucifier.jpg", ship.getImage());
 	}
