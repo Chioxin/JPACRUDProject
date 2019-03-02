@@ -4,4 +4,4 @@ pluginManagement {
 	}
 }
 rootProject.name = 'BootMVCCrudHomework'
-includeFFlat 'JPAProject'
+includeFlat 'JPAProject'
