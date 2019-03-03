@@ -1,4 +1,4 @@
-package com.skilldistillery.crudhomework.data;
+package com.skilldistillery.jpaproject.entities;
 
 public enum EmpireType {
 	AMARR("Amarr"),

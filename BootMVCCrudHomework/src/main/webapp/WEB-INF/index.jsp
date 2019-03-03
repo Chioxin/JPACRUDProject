@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <jsp:include page="components/bootstrapHead.jsp"></jsp:include>
@@ -8,9 +8,14 @@
 <title>Bob's Space Ship Emporium!</title>
 </head>
 <body>
-<p> HALP </p>
-<input type="submit" value="ROCK THIS WORLD"/>
 
+	<jsp:include page="components/navbar.jsp"></jsp:include>
+
+	<div id="main-body" class="container">
+		<p>HALP</p>
+		<input type="submit" value="ROCK THIS WORLD" />
+	</div>
+	
 </body>
 <jsp:include page="components/bootstrapFoot.jsp"></jsp:include>
 </html>

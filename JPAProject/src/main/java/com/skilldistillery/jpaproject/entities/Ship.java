@@ -2,6 +2,8 @@ package com.skilldistillery.jpaproject.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,9 +17,11 @@ public class Ship {
 
 	private String name;
 
-	private String empire;
+	@Enumerated(EnumType.STRING)
+	private EmpireType empire;
 
-	private String type;
+	@Enumerated(EnumType.STRING)
+	private ShipType type;
 
 	@Column(name = "speed_warp")
 	private int speedWarp;
@@ -62,19 +66,19 @@ public class Ship {
 		this.name = name;
 	}
 
-	public String getEmpire() {
+	public EmpireType getEmpire() {
 		return empire;
 	}
 
-	public void setEmpire(String empire) {
+	public void setEmpire(EmpireType empire) {
 		this.empire = empire;
 	}
 
-	public String getType() {
+	public ShipType getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(ShipType type) {
 		this.type = type;
 	}
 
@@ -195,10 +199,7 @@ public class Ship {
 				return false;
 		} else if (!description.equals(other.description))
 			return false;
-		if (empire == null) {
-			if (other.empire != null)
-				return false;
-		} else if (!empire.equals(other.empire))
+		if (empire != other.empire)
 			return false;
 		if (id != other.id)
 			return false;
@@ -222,10 +223,7 @@ public class Ship {
 			return false;
 		if (Double.doubleToLongBits(timeToWarp) != Double.doubleToLongBits(other.timeToWarp))
 			return false;
-		if (type == null) {
-			if (other.type != null)
-				return false;
-		} else if (!type.equals(other.type))
+		if (type != other.type)
 			return false;
 		return true;
 	}

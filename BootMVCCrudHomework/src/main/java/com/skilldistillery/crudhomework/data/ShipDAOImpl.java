@@ -9,7 +9,9 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
+import com.skilldistillery.jpaproject.entities.EmpireType;
 import com.skilldistillery.jpaproject.entities.Ship;
+import com.skilldistillery.jpaproject.entities.ShipType;
 
 @Transactional
 @Service
@@ -18,7 +20,7 @@ public class ShipDAOImpl implements ShipDAO {
 	@PersistenceContext
 	private EntityManager em;
 	
-	public void close() {
+	public void close() { // is this even needed? Where would I use it?
 		em.close();
 	}
 	
@@ -44,18 +46,20 @@ public class ShipDAOImpl implements ShipDAO {
 		return myList;
 	}
 	
-	public Ship addShip (Ship newShip) {
-		em.getTransaction().begin();
-		em.persist(newShip);
+	public Ship addShip (Ship ship) {
+//        I feel like these are needed, but it won't work with them in. Spring magic?
+//		em.getTransaction().begin();
+		em.persist(ship);
 		em.flush();
-		em.getTransaction().commit();
-		return newShip;
+//		em.getTransaction().commit();
+		return ship;
 	}
 	
 	public Ship updateShip (int id, Ship shipUpdate) {
 		Ship shipActual = findShipById(id);
 		
 		if (shipActual != null) {
+//			em.getTransaction().begin();
 			shipActual.setCargoCapacity(shipUpdate.getCargoCapacity());
 			shipActual.setDescription(shipUpdate.getDescription());
 			shipActual.setEmpire(shipUpdate.getEmpire());
@@ -69,7 +73,7 @@ public class ShipDAOImpl implements ShipDAO {
 			shipActual.setCost(shipUpdate.getCost());
 			em.persist(shipActual);
 			em.flush();
-			em.getTransaction().commit();
+//			em.getTransaction().commit();
 		}
 		
 		return shipActual;
@@ -80,9 +84,9 @@ public class ShipDAOImpl implements ShipDAO {
 		Ship destroyMe = em.find(Ship.class, id);
 		
 		if (destroyMe != null) {
-			em.getTransaction().begin();
+//			em.getTransaction().begin();
 			em.remove(destroyMe);
-			em.getTransaction().commit();
+//			em.getTransaction().commit();
 			
 			Ship testDestroy = em.find(Ship.class, id);
 			

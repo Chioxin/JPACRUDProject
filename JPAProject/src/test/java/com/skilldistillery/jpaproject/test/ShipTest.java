@@ -48,8 +48,8 @@ class ShipTest {
 	void test_Ship () {
 		assertEquals(1, ship.getId());
 		assertEquals("Crucifier", ship.getName());
-		assertEquals("Amarr", ship.getEmpire());
-		assertEquals("Frigate", ship.getType());
+		assertEquals("Amarr", ship.getEmpire().toString());
+		assertEquals("Frigate", ship.getType().toString());
 		assertEquals(5, ship.getSpeedWarp());
 		assertEquals(350, ship.getSpeedVelocity());
 		assertEquals(4.94, ship.getTimeToWarp());
