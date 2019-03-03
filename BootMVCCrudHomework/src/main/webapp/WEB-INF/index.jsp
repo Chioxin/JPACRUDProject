@@ -12,7 +12,7 @@
 	<jsp:include page="components/navbar.jsp"></jsp:include>
 
 	<div id="main-body" class="container">
-		<p>HALP</p>
+		<p>Just testing stuff out here.</p>
 		<input type="submit" value="ROCK THIS WORLD" />
 	</div>
 	

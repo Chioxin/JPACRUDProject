@@ -1,5 +1,5 @@
 
-<nav id="myNavBar" class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="myNavBar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
 	<a class="navbar-brand" href="/">Shipyard</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#navbarSupportedContent"

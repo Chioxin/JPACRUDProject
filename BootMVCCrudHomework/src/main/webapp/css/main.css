@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+body {
+	background-image: url(../art/station2.jpg);
+	background-repeat: no-repeat;
+	background-position: right right;
+	background-attachment: fixed;
+	background-size: cover;
+	
+	color: white;
+}
+
