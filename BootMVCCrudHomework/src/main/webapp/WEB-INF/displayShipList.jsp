@@ -12,9 +12,9 @@
 <body>
 
 	<jsp:include page="components/navbar.jsp"></jsp:include>
-
+<br>
 	<c:forEach var="ship" items="${displayShipList}">
-		<div id="shipContainer" class="container">
+		<div id="shipContainer" class="container shipContainer">
 			<div class="row">
 				<div id="shipImage" class="col-3">
 					<a href="displayShip.do?shipId=${ship.id}"><img class="rounded-lg" src="${ship.image }" /></a>
@@ -22,12 +22,12 @@
 
 				<div id="shipInfo" class="col-9">
 					<div class="container">
-						<div id="shipTitle" class="row">
+						<div id="shipTitle" class="row shipTitle">
 							<div class="col-4">${ship.name} </div>
 							<div class="col-4">${ship.type} </div>
 							<div class="col-4">${ship.empire} </div>
 						</div>
-						<div id="shipDescription" class="row">
+						<div id="shipDescription" class="row shipDescription">
 							<div class="col">
 								<p>${ship.description}</p>
 							</div>

@@ -7,6 +7,18 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	
-	color: white;
+	color: yellow;
 }
 
+#landingPage {
+	text-indent: 50px;
+	font-size: 25px;
+	font-style: oblique;
+}
+
+#pirateImage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
