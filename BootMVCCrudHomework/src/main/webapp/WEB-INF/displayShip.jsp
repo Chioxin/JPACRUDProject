@@ -19,7 +19,7 @@
 			<div class="row">
 				<div id="shipImage" class="col-3">
 				<c:choose>
-						<c:when test="${empty ship.image or ship.image == '' }">
+						<c:when test="${empty displayShip or displayShip.image == '' }">
 					<img class="rounded-lg" src="http://games.chruker.dk/eve_online/graphics/ids/256/3117_2009.jpg" />
 						</c:when>
 						<c:otherwise>
