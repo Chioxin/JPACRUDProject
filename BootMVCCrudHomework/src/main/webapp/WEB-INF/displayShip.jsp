@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <jsp:include page="components/bootstrapHead.jsp"></jsp:include>
@@ -17,8 +18,14 @@
 		<div id="shipContainer" class="container">
 			<div class="row">
 				<div id="shipImage" class="col-3">
-					<a href="displayShip.do?shipId=${ship.id}"><img
-						class="rounded-lg" src="${displayShip.image }" /></a>
+				<c:choose>
+						<c:when test="${empty ship.image or ship.image == '' }">
+					<img class="rounded-lg" src="http://games.chruker.dk/eve_online/graphics/ids/256/3117_2009.jpg" />
+						</c:when>
+						<c:otherwise>
+					<img class="rounded-lg" src="${displayShip.image }" />
+						</c:otherwise>
+					</c:choose>
 				</div>
 
 				<div id="shipInfo" class="col-9">

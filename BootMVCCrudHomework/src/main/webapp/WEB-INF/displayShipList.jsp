@@ -17,7 +17,14 @@
 		<div id="shipContainer" class="container shipContainer">
 			<div class="row">
 				<div id="shipImage" class="col-3">
+					<c:choose>
+						<c:when test="${empty ship.image or ship.image == '' }">
+					<a href="displayShip.do?shipId=${ship.id}"><img class="rounded-lg" src="http://games.chruker.dk/eve_online/graphics/ids/256/3117_2009.jpg" /></a>
+						</c:when>
+						<c:otherwise>
 					<a href="displayShip.do?shipId=${ship.id}"><img class="rounded-lg" src="${ship.image }" /></a>
+						</c:otherwise>
+					</c:choose>
 				</div>
 
 				<div id="shipInfo" class="col-9">
