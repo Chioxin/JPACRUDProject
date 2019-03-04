@@ -19,7 +19,7 @@
 					the universe at the best prices! We won't tell you how we got them,
 					so that way when Concord stop ya, you can claim innocence!</p>
 					
-					<img id="pirateImage" src="../art/pirate.png"/>
+					<img id="pirateImage" src="art/pirate.png"/>
 
 			</div>
 		</div>

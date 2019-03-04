@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="components/bootstrapHead.jsp"></jsp:include>
-<link rel="stylesheet" type="text/css" href="../css/shipcard.css" />
+<link rel="stylesheet" type="text/css" href="css/shipcard.css" />
 <head>
 <meta charset="UTF-8">
 <title>List of Ships</title>

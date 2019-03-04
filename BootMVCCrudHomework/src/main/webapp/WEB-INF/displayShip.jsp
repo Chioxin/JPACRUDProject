@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="components/bootstrapHead.jsp"></jsp:include>
-<link rel="stylesheet" type="text/css" href="../css/shipcard.css" />
+<link rel="stylesheet" type="text/css" href="css/shipcard.css" />
 <head>
 <meta charset="UTF-8">
 <title>Display Ship</title>
@@ -12,7 +12,7 @@
 <body>
 
 	<jsp:include page="components/navbar.jsp"></jsp:include>
-
+<br>
 	<div class="container">
 
 		<div id="shipContainer" class="container">

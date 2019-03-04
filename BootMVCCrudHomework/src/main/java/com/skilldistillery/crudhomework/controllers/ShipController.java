@@ -24,7 +24,7 @@ public class ShipController {
 	@Autowired
 	private ShipDAO dao;
 	
-	@RequestMapping(path="/", method=RequestMethod.GET)
+	@RequestMapping(path= {"/", "home.do"}, method=RequestMethod.GET)
 	public String index() {
 		return "index";
 	}

@@ -22,7 +22,7 @@
 		</div>
 		<div class="row justify-content-md-center">
 			<div class="col-md-2">
-				<form action="/" method="GET">
+				<form action="home.do" method="GET">
 					<input class="btn btn-success" value="KEEP IT" type="submit" />
 				</form>
 			</div>
